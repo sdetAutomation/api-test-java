@@ -57,3 +57,4 @@ Questions / Contact / Contribute
 Feel free to fork this repo, add to it, and create a pull request if you like to contribute.  
 
 If you have any questions, you can contact me via email: `sdet.testautomation@gmail.com`
+
