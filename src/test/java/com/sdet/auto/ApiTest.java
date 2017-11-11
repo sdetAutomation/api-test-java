@@ -3,12 +3,14 @@ package com.sdet.auto;
 import com.sdet.auto.api.bitpay.GetBitPayData;
 import com.sdet.auto.api.bitpay.TestDataBitPay;
 import com.sdet.auto.api.bitpay.VerifyBitPay;
+import com.sdet.auto.api.jsonplaceholder.DeleteJsonPlaceholder;
 import com.sdet.auto.api.jsonplaceholder.PostJsonPlaceholder;
 import com.sdet.auto.api.jsonplaceholder.TestDataJsonPlaceholder;
 import com.sdet.auto.api.jsonplaceholder.VerifyJsonPlaceholder;
 import com.sdet.auto.dataModel.JsonPlaceholderObject;
 import com.sdet.auto.dataModel.RatesObject;
 import com.sdet.auto.testHelper.ConfigSettings;
+import com.sdet.auto.testHelper.LoggingLibrary;
 import org.junit.Test;
 
 
@@ -37,5 +39,15 @@ public class ApiTest extends TestBaseClass {
         JsonPlaceholderObject response = PostJsonPlaceholder.createRecord(url, testData);
 
         VerifyJsonPlaceholder.VerifyJsonPlaceholderData(testAssert, response, testData);
+    }
+
+    @Test
+    public void TC0003_Delete_Test() {
+
+        final String url = ConfigSettings.getJsonplaceholderApiUrl() + "posts/100";
+
+        String response = DeleteJsonPlaceholder.deleteRecord(url);
+
+        VerifyJsonPlaceholder.VerifyJsonPlaceholderDelete(testAssert, response, "200");
     }
 }

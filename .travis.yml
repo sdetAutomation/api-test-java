@@ -2,5 +2,5 @@ language: java
 sudo: false
 script:
 - mvn clean
-- mvn install
+- mvn install -DskipTests
 - mvn surefire:test
