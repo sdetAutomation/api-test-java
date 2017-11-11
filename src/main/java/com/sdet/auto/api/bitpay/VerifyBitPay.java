@@ -1,4 +1,4 @@
-package com.sdet.auto.api;
+package com.sdet.auto.api.bitpay;
 
 import com.sdet.auto.dataModel.RatesObject;
 import com.sdet.auto.testHelper.IoLibrary;
