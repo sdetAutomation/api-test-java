@@ -16,4 +16,11 @@ public class VerifyJsonPlaceholder {
         testAssert.setPass(LoggingLibrary.CompareResult(actualObj.getTitle(), baselineObj.getTitle()));
         testAssert.setPass(LoggingLibrary.CompareResult(actualObj.getBody(), baselineObj.getBody()));
     }
+
+    public static void VerifyJsonPlaceholderDelete(TestAssert testAssert, String actual, String baseline ){
+
+        IoLibrary.writeLine("Verifying Json Placeholder Delete.");
+
+        testAssert.setPass(LoggingLibrary.CompareResult(actual, baseline));
+    }
 }
