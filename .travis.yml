@@ -3,3 +3,4 @@ sudo: false
 script:
 - mvn clean
 - mvn install
+- mvn surefire:test
