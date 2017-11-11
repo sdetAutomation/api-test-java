@@ -44,7 +44,8 @@ This project is written in Java and tests can be executed using Maven commands.
 
 Test Rest Api
 -----
-    https://bitpay.com/api/    
+    https://bitpay.com/api/
+    https://jsonplaceholder.typicode.com/    
 
    
 Continuous Integration(CI)
