@@ -6,15 +6,25 @@ import java.util.Properties;
 
 public class ConfigSettings {
 
-    public static String getApiUrl() {
-        return apiUrl;
+
+    private static String bitpayApiUrl;
+    private static String jsonplaceholderApiUrl;
+
+    public static String getBitpayApiUrl() {
+        return bitpayApiUrl;
     }
 
-    public static void setApiUrl(String apiUrl) {
-        ConfigSettings.apiUrl = apiUrl;
+    public static void setBitpayApiUrl(String bitpayApiUrl) {
+        ConfigSettings.bitpayApiUrl = bitpayApiUrl;
     }
 
-    private static String apiUrl;
+    public static String getJsonplaceholderApiUrl() {
+        return jsonplaceholderApiUrl;
+    }
+
+    public static void setJsonplaceholderApiUrl(String jsonplaceholderApiUrl) {
+        ConfigSettings.jsonplaceholderApiUrl = jsonplaceholderApiUrl;
+    }
 
     public void getConfigSettings() throws IOException {
 
@@ -23,10 +33,13 @@ public class ConfigSettings {
         InputStream inputStream = getClass().getClassLoader().getResourceAsStream(propFileName);
         property.load(inputStream);
 
-        setApiUrl(property.getProperty("apiUrl"));
+        setBitpayApiUrl(property.getProperty("bitpayApiUrl"));
+        setJsonplaceholderApiUrl(property.getProperty("jsonplaceholderApiUrl"));
 
         IoLibrary.writeLine("Test Config Settings");
-        System.out.println(String.format("apiUrl: %s", getApiUrl()));
+        System.out.println(String.format("bitpayApiUrl: %s", bitpayApiUrl));
+        System.out.println(String.format("jsonplaceholderApiUrl: %s", jsonplaceholderApiUrl));
+
         IoLibrary.writelineEnd();
     }
 }

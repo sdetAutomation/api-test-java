@@ -1,8 +1,8 @@
-package com.sdet.auto.api;
+package com.sdet.auto.api.bitpay;
 
 import com.sdet.auto.dataModel.RatesObject;
 
-public class TestData {
+public class TestDataBitPay {
 
     public static RatesObject ratesTestDataSetup(){
 

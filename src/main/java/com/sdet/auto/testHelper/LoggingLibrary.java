@@ -26,5 +26,15 @@ public class LoggingLibrary {
         }
     }
 
+    public static boolean CompareResult(boolean actual, boolean expected){
 
+        if(actual == expected){
+            IoLibrary.writeLine(String.format("PASS: Actual(%s) | Expected(%s)", actual, expected));
+            return true;
+        }
+        else{
+            IoLibrary.writeLine(String.format("FAIL: Actual(%s) | Expected(%s)", actual, expected));
+            return false;
+        }
+    }
 }
