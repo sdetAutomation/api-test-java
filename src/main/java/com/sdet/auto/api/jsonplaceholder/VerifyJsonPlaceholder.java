@@ -23,4 +23,14 @@ public class VerifyJsonPlaceholder {
 
         testAssert.setPass(LoggingLibrary.CompareResult(actual, baseline));
     }
+
+    public static void VerifyJsonPlaceholderPutData(TestAssert testAssert, JsonPlaceholderObject actualObj, JsonPlaceholderObject baselineObj){
+
+        IoLibrary.writeLine("Verifying Json Placeholder response Data Object.");
+
+        testAssert.setPass(LoggingLibrary.CompareResult(actualObj.getUserId(), baselineObj.getUserId()));
+        testAssert.setPass(LoggingLibrary.CompareResult(actualObj.getId(), baselineObj.getId()));
+        testAssert.setPass(LoggingLibrary.CompareResult(actualObj.getTitle(), baselineObj.getTitle()));
+        testAssert.setPass(LoggingLibrary.CompareResult(actualObj.getBody(), baselineObj.getBody()));
+    }
 }
