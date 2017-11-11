@@ -39,8 +39,8 @@ Maven Java Project
 This project is written in Java and tests can be executed using Maven commands. 
 
     mvn clean
-    mvn test
-
+    mvn install -DskipTests
+    mvn surefire:test
 
 Test Rest Api
 -----
