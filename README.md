@@ -22,15 +22,27 @@ Project Packages
 -----
 * Api:  
 Contains class files used for testing rest api.  
-    - GetBitPayData: contains all get functions for making rest api Get calls.
-    - TestData: contains functions for setting up test data baselines used for verification. 
-    - VerifyBitPay: contains all verification functions. 
+    - BitPay:
+        - GetBitPayData: get bitpay data.
+        - TestDataBitPay: test data baselines setup. 
+        - VerifyBitPay: bitpay verification functions. 
+    
+    - JsonPlace?Holder:
+        - DeleteJsonPlaceholder: delete a jsonplaceholder record.
+        - PostJsonPlaceholder: create a jsonplaceholder record.
+        - PutJsonPlaceholder: edit a jsonplaceholder record. 
+        - TestDataJsonPlaceholder: test data baseline setup.
+        - VerifyJsonPlaceholder: jsonplaceholder verification functions. 
+        
+        
+* DataModel:
+    - Class for creating bitpay and jsonplaceholder objects. 
     
  
 * TestHelper:  
-    - ConfigSettings: contains helper functions for reading config.properties.  
-    - IoLibrary: contains helper functions used across tests.  
-    - LoggingLibrary: contains custom functions for comparing actual to expected conditions.  
+    - ConfigSettings: Helper functions for reading config.properties.  
+    - IoLibrary: Helper functions used across tests.  
+    - LoggingLibrary: Custom functions for comparing actual to expected conditions.  
     - TestAssert: Is a custom assert, used to track if a verification point has failed.  The class variable is latched, once set to false it will remain false for the remainder of the test run. 
 
 

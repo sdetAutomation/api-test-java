@@ -7,9 +7,11 @@ import com.sdet.auto.api.jsonplaceholder.*;
 import com.sdet.auto.dataModel.JsonPlaceholderObject;
 import com.sdet.auto.dataModel.RatesObject;
 import com.sdet.auto.testHelper.ConfigSettings;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 
-
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class ApiTest extends TestBaseClass {
 
 
