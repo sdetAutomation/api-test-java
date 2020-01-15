@@ -10,6 +10,7 @@
 # api-test-java
 Startup Project for testing Rest Api using Java.
 
+[![Build Status](https://travis-ci.org/sdetAutomation/api-test-java.svg?branch=master)](https://travis-ci.org/sdetAutomation/api-test-java)
 
 Introduction
 ------------
